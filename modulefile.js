@@ -332,17 +332,17 @@ circle4.style.backgroundImage = 'url("./images.png")';
 circle4.style.backgroundPosition = "center";
 circle4.style.backgroundSize = "250px";
 
-console.log(_EXAMDATA.teamInformation.teamAllMember[0]);
-Box0.textContent = _EXAMDATA.teamInformation.teamAllMember[0].githubAddress;
-console.log(Object.keys(_EXAMDATA.teamInformation.teamAllMember[0]));
-
-
 // 반복문이 시행되지 않는 이유는..?!
 // for (let i = 0; i < makeIntroduceBoxArray.length; i++) {
 //   circle[i].style.backgroundImage = 'url("./images.png")';
 //   circle[i].style.backgroundPosition = "center";
 //   circle[i].style.backgroundSize = "250px";
 // }
+
+
+console.log(_EXAMDATA.teamInformation.teamAllMember[0]);
+Box0.textContent = _EXAMDATA.teamInformation.teamAllMember[0].githubAddress;
+console.log(Object.keys(_EXAMDATA.teamInformation.teamAllMember[0]));
 
 // footer styling
 
