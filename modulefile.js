@@ -158,6 +158,13 @@ kdtSubject.children[0].style.width = "100%";
 kdtSubject.children[0].style.height = "15%";
 kdtSubject.children[1].style.width = "100%";
 kdtSubject.children[1].style.height = "85%";
+const kdtSubjectH2Tag = document.createElement('h2');
+kdtSubjectH2Tag.textContent = "KDT과목";
+kdtSubject.children[0].appendChild(kdtSubjectH2Tag);
+
+const kdtSubjectSpanTag = document.createElement('span');
+kdtSubjectSpanTag.textContent = "KDT과목~~~";
+kdtSubject.children[1].appendChild(kdtSubjectSpanTag);
 
 // kdtProject 안의 div styling
 elementMaker('div', kdtProject);
@@ -166,8 +173,59 @@ kdtProject.children[0].style.width = "100%";
 kdtProject.children[0].style.height = "15%";
 kdtProject.children[1].style.width = "100%";
 kdtProject.children[1].style.height = "85%";
+const kdtProjectH2Tag = document.createElement('h2');
+kdtProjectH2Tag.textContent = "수행중인 프로젝트";
+kdtProject.children[0].appendChild(kdtProjectH2Tag);
 
-// teamIntroduce 안의 div styling
+const kdtProjectSpanTag = document.createElement('span');
+kdtProjectSpanTag.textContent = "수행중인 프로젝트~~~~";
+kdtProject.children[1].appendChild(kdtProjectSpanTag);
+
+// teamIntroduce styling
+teamIntroduce.style.display = "flex";
+teamIntroduce.style.flexDirection = "column";
+teamIntroduce.style.justifyContent = "space-around";
+// teamIntroduce 의 소개 란의 개수를 결정하는 배열
+// 배열의 개수 만큼 소개 란 생성
+let makeIntroduceBoxArray = ["box1", "box2", "box3", "box4", "box5"];
+// 사진(원), 소개(박스) 로 구성된 container div를 만드는 함수
+function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
+  // makeIntroduceBoxArray의 요소 갯수 만큼 반복 진행
+  for (let i = 0; i < makeIntroduceBoxArray.length; i++) {
+    // 요소 만들고 구조를 생성하는 부분
+    const makeIntroduceBox = document.createElement(containerElement);
+    const makeCircle = document.createElement(childElementOne);
+    const makeBox = document.createElement(childElementTwo);
+    teamIntroduce.appendChild(makeIntroduceBox);
+    // 짝수 번째의 박스 원은 배치를 바꿔주는 조건
+    if(i%2 === 0) {
+      makeIntroduceBox.appendChild(makeCircle);
+      makeIntroduceBox.appendChild(makeBox);
+    }else {
+      makeIntroduceBox.appendChild(makeBox);
+      makeIntroduceBox.appendChild(makeCircle);
+    }
+    makeIntroduceBox.style.width = "100%";
+    makeIntroduceBox.style.height = "15%"
+    makeIntroduceBox.style.display = "flex";
+    makeIntroduceBox.style.justifyContent = "space-around";
+    makeIntroduceBox.style.alignContent = "center"
+
+    makeCircle.style.width = "10%";
+    makeCircle.style.height = "100%";
+    makeCircle.style.backgroundColor = "#CB5F5F";
+    makeCircle.style.borderRadius = "50%"
+
+    makeBox.style.width = "70%";
+    makeBox.style.height = "100%";
+    makeBox.style.backgroundColor = "#62A0DA";
+    makeBox.style.borderRadius = "20px";
+  };
+};
+// introdueBoxMaker 함수 호출
+introdueBoxMaker('div','div','div');
+
+// footer styling
 
 
 /// 화면 width 크기 변경에 따라 화면에 출력하는 구문
