@@ -312,21 +312,30 @@ circle0.style.backgroundImage = 'url("./images.png")';
 circle0.style.backgroundPosition = "center";
 circle0.style.backgroundSize = "250px";
 
+
 circle1.style.backgroundImage = 'url("./images.png")';
 circle1.style.backgroundPosition = "center";
 circle1.style.backgroundSize = "250px";
+
 
 circle2.style.backgroundImage = 'url("./images.png")';
 circle2.style.backgroundPosition = "center";
 circle2.style.backgroundSize = "250px";
 
+
 circle3.style.backgroundImage = 'url("./images.png")';
 circle3.style.backgroundPosition = "center";
 circle3.style.backgroundSize = "250px";
 
+
 circle4.style.backgroundImage = 'url("./images.png")';
 circle4.style.backgroundPosition = "center";
 circle4.style.backgroundSize = "250px";
+
+console.log(_EXAMDATA.teamInformation.teamAllMember[0]);
+Box0.textContent = _EXAMDATA.teamInformation.teamAllMember[0].githubAddress;
+console.log(Object.keys(_EXAMDATA.teamInformation.teamAllMember[0]));
+
 
 // 반복문이 시행되지 않는 이유는..?!
 // for (let i = 0; i < makeIntroduceBoxArray.length; i++) {
