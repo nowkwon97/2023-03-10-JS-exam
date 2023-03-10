@@ -1,34 +1,40 @@
 const _EXAMDATA = {
   teamInformation: {
-    teamNumber : 0,
-    teamName: "팀명 작성",
-    teamNameStory: "팀명은 이런이유로 만들었답니다!",
-    teamManager: "공욱재",
+    teamNumber : 5,
+    teamName: "세동서유",
+    teamNameStory: "세종, 동구, 서구, 유성구의 대표들로 구성하였습니다.",
+    teamManager: "김동주",
     teamAllMember: [
       {
-        memberNumber: 0,
-        name: "공욱재",
+        memberNumber: 1,
+        name: "김동주",
         teamPosition: "팀장",
-        githubAddress: "https://www.github.com/"
+        githubAddress: "https://www.github.com/AmondChocolateShake"
       },
       {
-        memberNumber: 0,
-        name: "공욱재",
-        teamPosition: "팀장",
-        githubAddress: "https://www.github.com/"
+        memberNumber: 2,
+        name: "이재권",
+        teamPosition: "팀원",
+        githubAddress: "https://www.github.com/nowkwon97"
       },
       {
-        memberNumber: 0,
-        name: "공욱재",
-        teamPosition: "팀장",
-        githubAddress: "https://www.github.com/"
+        memberNumber: 3,
+        name: "정지은",
+        teamPosition: "팀원",
+        githubAddress: "https://www.github.com/jiny43"
       },
       {
-        memberNumber: 0,
-        name: "공욱재",
-        teamPosition: "팀장",
-        githubAddress: "https://www.github.com/"
+        memberNumber: 4,
+        name: "최대건",
+        teamPosition: "팀원",
+        githubAddress: "https://www.github.com/dgchoi3904"
       },
+      {
+        memberNumber: 5,
+        name: "임지성",
+        teamPosition: "팀원",
+        githubAddress: "https://www.github.com/WJKK21"
+      }
     ]
   },
   trainingInformation: {
@@ -49,7 +55,7 @@ const _EXAMDATA = {
     breakPoint : [ "768px", "1280px",  "1920px"]
   }
 }
-console.log(_EXAMDATA.trainingInformation.subject);
+
 // body styleing
 document.body.style.display = "flex";
 document.body.style.alignContent = "center";
@@ -197,10 +203,23 @@ elementMaker('div', kdtSubject);
 elementMaker('ul', kdtSubject, 'id', 'ul');
 for (let i = 0; i < _EXAMDATA.trainingInformation.subject.length; i++) {
   elementMaker('li', ul, 'id', `li${i}`);
-  
 };
 console.dir(li0);
+console.log(_EXAMDATA.trainingInformation.subject);
+li0.textContent = _EXAMDATA.trainingInformation.subject[0];
+li1.textContent = _EXAMDATA.trainingInformation.subject[1];
+li2.textContent = _EXAMDATA.trainingInformation.subject[2];
+li3.textContent = _EXAMDATA.trainingInformation.subject[3];
+li4.textContent = _EXAMDATA.trainingInformation.subject[4];
+li5.textContent = _EXAMDATA.trainingInformation.subject[5];
+li6.textContent = _EXAMDATA.trainingInformation.subject[6];
+li7.textContent = _EXAMDATA.trainingInformation.subject[7];
+li8.textContent = _EXAMDATA.trainingInformation.subject[8];
 
+// 아래 반복문이 안되는 이유는 무엇일까?
+// for (let i = 0; i < _EXAMDATA.trainingInformation.subject.length; i++) {
+//   li[i].textContent = _EXAMDATA.trainingInformation.subject[i];
+// };
 
 kdtSubject.children[0].style.width = "100%";
 kdtSubject.children[0].style.height = "15%";
@@ -309,12 +328,24 @@ circle4.style.backgroundImage = 'url("./images.png")';
 circle4.style.backgroundPosition = "center";
 circle4.style.backgroundSize = "250px";
 
+// 반복문이 시행되지 않는 이유는..?!
+// for (let i = 0; i < makeIntroduceBoxArray.length; i++) {
+//   circle[i].style.backgroundImage = 'url("./images.png")';
+//   circle[i].style.backgroundPosition = "center";
+//   circle[i].style.backgroundSize = "250px";
+// }
+
 // footer styling
+
+
+
 
 // matchMedia test용
 let mobile = "test1";
 let tablet = "test2";
 let desktop = "test3";
+
+
 /// 화면 width 크기 변경에 따라 화면에 출력하는 구문
 // 사이즈의 조절마다 반영을 하기 위해
 // 수동으로 새로고침을 해야하는 작업이 필요하다
